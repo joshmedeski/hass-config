@@ -6,3 +6,5 @@
 /home-assistant_v2.db
 /tts
 /deps
+/secrets.yaml
+/nest.conf
