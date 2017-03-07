@@ -1,0 +1,21 @@
+- name: Livingroom
+  entities:
+    light.tv_light:
+      state: on
+    light.livingroom_lamp:
+      state: on
+    light.desk_light:
+      state: off
+    light.office_lamp:
+      state: off
+    light.bedroom_lamp:
+      state: off
+    light.kitchen_light_1:
+      state: off
+    light.kitchen_light_2:
+      state: off
+    light.dining_room_light:
+      state: off
+    light.porch_light:
+      state: off
+

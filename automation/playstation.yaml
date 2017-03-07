@@ -1,0 +1,19 @@
+- alias: "Playstation On"
+  trigger:
+    - platform: state
+      entity_id: switch.playstation4
+      from: 'off'
+      to: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.playstation_on
+- alias: "Playstation Standby"
+  trigger:
+    - platform: state
+      entity_id: switch.playstation4
+      from: 'on'
+      to: 'off'
+  action:
+    service: scene.turn_on
+    entity_id: scene.playstation_standby
+

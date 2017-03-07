@@ -1,0 +1,22 @@
+- name: Livingroom normal
+  entities:
+    light.livingroom_lamp:
+      state: on
+      transition: 1
+      brightness: 200
+    light.tv_light:
+      state: on
+      transition: 1
+      brightness: 50
+
+- name: Livingroom dim
+  entities:
+    light.livingroom_lamp:
+      state: on
+      transition: 1
+      brightness: 75
+    light.tv_light:
+      state: on
+      transition: 1
+      brightness: 230
+

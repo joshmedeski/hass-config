@@ -1,252 +1,26 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
-  latitude: 29.7482
-  longitude: -95.4909
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 18
-  # metric for Metric, imperial for Imperial
+  latitude: !secrets home_lat
+  longitude: !secrets home_long
+  elevation: !secrets home_elevation
   unit_system: imperial
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Chicago
+  time_zone: !secrets home_timezone
 
-# Show links to resources in log and frontend
-introduction:
-
-ifttt:
-  key: dExBKge5gVQywJkS2Wa5kR
-
-# Enables the frontend
-frontend:
-
-http:
-  # Uncomment this to add a password (recommended!)
-  api_password: AFnxdK6tDeGyLuTNK4wiLrtPtyptdeT
-  # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: example.duckdns.org:8123
-
-# Checks for available updates
 updater:
-
-# Discover some devices automatically
 discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Enables support for tracking state changes over time.
+frontend:
 history:
-
-# View all events in a logbook
 logbook:
-
-# Track the sun
 sun:
 
-switch:
-  - platform: command_line
-    switches:
-      playstation4:
-        command_on: 'ps4-waker'
-        command_off: 'ps4-waker standby'
-        command_state: 'ps4-waker search | grep -qi "200 Ok"'
-        friendly_name: "Playstation 4"
-
-# sensor:
-#   - platform: command_line
-#     name: current game
-#     command: ps4-waker search | grep -w "running-app-name" | cut -c 24- | rev | cut -c 3-  | rev | sed 's/[!@#\$%^&*(®)™]//g'
-#     scan_interval: 60
-
-# Weather Prediction
-sensor:
-  platform: yr
-
-# Text to speech
+http:
+  api_password: !secrets http_password
+ifttt:
+  key: !secrets ifttt_key
 tts:
   platform: google
 
-scene:
-
-  - name: Brighter Livingroom
-    entities:
-      light.livingroom_lamp:
-        brightness: 255
-        color_temp: 153
-
-  - name: Office
-    entities:
-      light.desk_light:
-        state: on
-      light.office_lamp:
-        state: on
-      light.tv_light:
-        state: off
-      light.livingroom_lamp:
-        state: off
-      light.bedroom_lamp:
-        state: off
-      light.kitchen_light_1:
-        state: off
-      light.kitchen_light_2:
-        state: off
-      light.dining_room_light:
-        state: off
-      light.porch_light:
-        state: off
-
-  - name: Livingroom
-    entities:
-      light.tv_light:
-        state: on
-      light.livingroom_lamp:
-        state: on
-      light.desk_light:
-        state: off
-      light.office_lamp:
-        state: off
-      light.bedroom_lamp:
-        state: off
-      light.kitchen_light_1:
-        state: off
-      light.kitchen_light_2:
-        state: off
-      light.dining_room_light:
-        state: off
-      light.porch_light:
-        state: off
-
-  - name: Kitchen
-    entities:
-      light.tv_light:
-        state: off
-      light.livingroom_lamp:
-        state: off
-      light.desk_light:
-        state: off
-      light.office_lamp:
-        state: off
-      light.bedroom_lamp:
-        state: off
-      light.kitchen_light_1:
-        state: on
-      light.kitchen_light_2:
-        state: on
-      light.dining_room_light:
-        state: off
-      light.porch_light:
-        state: off
-
-  - name: Tv light off
-    entities:
-      light.tv_light:
-        state: off
-  - name: Tv light on
-    entities:
-      light.tv_light:
-        state: on
-
-  - name: Playstation On
-    entities:
-      light.tv_light:
-        state: on
-        transition: 1
-        brightness: 200
-        rgb_color: [34, 46, 168]
-  - name: Playstation Standby
-    entities:
-      light.tv_light:
-        state: on
-        transition: 1
-        brightness: 100
-        color_name: orange
-
-  - name: Livingroom normal
-    entities:
-      light.livingroom_lamp:
-        state: on
-        transition: 1
-        brightness: 200
-      light.tv_light:
-        state: on
-        transition: 1
-        brightness: 50
-
-  - name: Livingroom dim
-    entities:
-      light.livingroom_lamp:
-        state: on
-        transition: 1
-        brightness: 75
-      light.tv_light:
-        state: on
-        transition: 1
-        brightness: 230
-
-automation:
-  - alias: "TV Off"
-    trigger:
-      - platform: state
-        entity_id: media_player.hisense_roku_tv
-        from: 'playing'
-        to: 'home'
-    action:
-      service: scene.turn_on
-      entity_id: scene.tv_on
-  - alias: "TV On"
-    trigger:
-      - platform: state
-        entity_id: media_player.hisense_roku_tv
-        from: 'home'
-        to: 'playing'
-    action:
-      service: scene.turn_on
-      entity_id: scene.tv_off
-      
-  - alias: "Playstation On"
-    trigger:
-      - platform: state
-        entity_id: switch.playstation4
-        from: 'off'
-        to: 'on'
-    action:
-      service: scene.turn_on
-      entity_id: scene.playstation_on
-  - alias: "Playstation Standby"
-    trigger:
-      - platform: state
-        entity_id: switch.playstation4
-        from: 'on'
-        to: 'off'
-    action:
-      service: scene.turn_on
-      entity_id: scene.playstation_standby
-
-  - alias: "Media player paused/stopped"
-    trigger:
-      - platform: state
-        entity_id: media_player.living_room
-        from: 'playing'
-        to: 'paused'
-    condition:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-    action:
-        service: scene.turn_on
-        entity_id: scene.livingroom_normal
-
-  - alias: "Media player playing"
-    trigger:
-      - platform: state
-        entity_id: media_player.living_room
-        to: 'playing'
-        from: 'paused'
-    condition:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-    action:
-        service: scene.turn_on
-        entity_id: scene.livingroom_dim
+automation: !include_dir_merge_list automation
+scene: !include_dir_merge_list scene
+sensor: !include_dir_merge_list sensor
+switch: !include_dir_merge_list switch

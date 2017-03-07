@@ -1,0 +1,9 @@
+- name: Tv light off
+  entities:
+    light.tv_light:
+      state: off
+- name: Tv light on
+  entities:
+    light.tv_light:
+      state: on
+
