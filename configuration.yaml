@@ -19,6 +19,9 @@ ifttt:
   key: !secret ifttt_key
 tts:
   platform: google
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
 
 automation: !include_dir_merge_list automation
 scene: !include_dir_merge_list scene
