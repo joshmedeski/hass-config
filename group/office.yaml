@@ -1,7 +1,7 @@
-- office:
-    name: Office
-    icon: mdi:desktop-mac
-    entities:
-      - scene.office
-      - light.office_lamp
-      - light.desk_light
+office:
+  name: Office
+  icon: mdi:desktop-mac
+  entities:
+    - scene.office
+    - light.office_lamp
+    - light.desk_light
