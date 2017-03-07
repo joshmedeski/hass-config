@@ -1,0 +1,7 @@
+- kitchen:
+    name: Kitchen
+    icon: local_dining
+    entities:
+      - light.kitchen_light_1
+      - light.kitchen_light_2
+      - light.porch_light

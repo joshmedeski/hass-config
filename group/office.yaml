@@ -1,0 +1,6 @@
+- office:
+    name: Office
+    icon: desktop_mac
+    entities:
+      - light.office_lamp
+      - light.desk_light
