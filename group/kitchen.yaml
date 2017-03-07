@@ -1,6 +1,6 @@
 - kitchen:
     name: Kitchen
-    icon: local_dining
+    icon: mdi:restaurant
     entities:
       - light.kitchen_light_1
       - light.kitchen_light_2

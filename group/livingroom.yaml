@@ -1,6 +1,6 @@
 - livingroom:
     name: Living Room
-    icon: live_tv
+    icon: mdi:live-tv
     entities:
       - light.livingroom_lamp
       - light.tv_light

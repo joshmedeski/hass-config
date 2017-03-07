@@ -1,5 +1,5 @@
 - bedroom:
     name: Bed Room
-    icon: hotel
+    icon: mdi:hotel
     entities:
       light.bedroom_lamp
