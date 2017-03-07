@@ -14,12 +14,15 @@ homeassistant:
 # Show links to resources in log and frontend
 introduction:
 
+ifttt:
+  key: dExBKge5gVQywJkS2Wa5kR
+
 # Enables the frontend
 frontend:
 
 http:
   # Uncomment this to add a password (recommended!)
-  # api_password: PASSWORD
+  api_password: AFnxdK6tDeGyLuTNK4wiLrtPtyptdeT
   # Uncomment this if you are using SSL or running in Docker etc
   # base_url: example.duckdns.org:8123
 
@@ -65,6 +68,76 @@ tts:
   platform: google
 
 scene:
+
+  - name: Brighter Livingroom
+    entities:
+      light.livingroom_lamp:
+        brightness: 255
+        color_temp: 153
+
+  - name: Office
+    entities:
+      light.desk_light:
+        state: on
+      light.office_lamp:
+        state: on
+      light.tv_light:
+        state: off
+      light.livingroom_lamp:
+        state: off
+      light.bedroom_lamp:
+        state: off
+      light.kitchen_light_1:
+        state: off
+      light.kitchen_light_2:
+        state: off
+      light.dining_room_light:
+        state: off
+      light.porch_light:
+        state: off
+
+  - name: Livingroom
+    entities:
+      light.tv_light:
+        state: on
+      light.livingroom_lamp:
+        state: on
+      light.desk_light:
+        state: off
+      light.office_lamp:
+        state: off
+      light.bedroom_lamp:
+        state: off
+      light.kitchen_light_1:
+        state: off
+      light.kitchen_light_2:
+        state: off
+      light.dining_room_light:
+        state: off
+      light.porch_light:
+        state: off
+
+  - name: Kitchen
+    entities:
+      light.tv_light:
+        state: off
+      light.livingroom_lamp:
+        state: off
+      light.desk_light:
+        state: off
+      light.office_lamp:
+        state: off
+      light.bedroom_lamp:
+        state: off
+      light.kitchen_light_1:
+        state: on
+      light.kitchen_light_2:
+        state: on
+      light.dining_room_light:
+        state: off
+      light.porch_light:
+        state: off
+
   - name: Tv light off
     entities:
       light.tv_light:
