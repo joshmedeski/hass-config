@@ -1,2 +1,2 @@
-switch.rainmate:
-  entity_picture: ./icons/rainmate.jpg
+sensor.rainmate:
+  icon: mdi:water

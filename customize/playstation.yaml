@@ -1,2 +1,2 @@
-switch.playstation4:
-  entity_picture: ./icons/playstation.gif
+switch.playstation4
+  icon: mdi:gamepad-variant
