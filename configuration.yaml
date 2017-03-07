@@ -1,10 +1,10 @@
 homeassistant:
   name: Home
-  latitude: !secrets home_lat
-  longitude: !secrets home_long
-  elevation: !secrets home_elevation
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  elevation: !secret home_elevation
   unit_system: imperial
-  time_zone: !secrets home_timezone
+  time_zone: !secret home_timezone
 
 updater:
 discovery:
@@ -14,9 +14,9 @@ logbook:
 sun:
 
 http:
-  api_password: !secrets http_password
+  api_password: !secret http_password
 ifttt:
-  key: !secrets ifttt_key
+  key: !secret ifttt_key
 tts:
   platform: google
 
