@@ -1,5 +1,6 @@
-weather:
-  name: Weather
+time:
+  name: Time
   entities:
     - sun.sun
+    - sensor.moon
     - sensor.yr_symbol
