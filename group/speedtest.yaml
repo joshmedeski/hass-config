@@ -1,7 +1,0 @@
-speedtest:
-  name: Internet Speed
-  icon: mdi:router
-  entities:
-    - sensor.speedtest_ping
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
