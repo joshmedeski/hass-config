@@ -6,6 +6,6 @@ weather:
     - sensor.dark_sky_wind_speed
     - sensor.dark_sky_precip_intensity
     - sensor.dark_sky_precip_probability
-    - sensor.dark_sky_temperature_max
-    - sensor.dark_sky_temperature_min
-    - sensor.dark_sky_cloud_cover
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_cloud_coverage
