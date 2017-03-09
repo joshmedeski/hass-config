@@ -23,6 +23,9 @@ tts:
 nest:
   client_id: !secret nest_id
   client_secret: !secret nest_secret
+light:
+  platform: hue
+  host: !secret hue_host
 
 automation: !include_dir_merge_list automation
 group: !include_dir_merge_named group
