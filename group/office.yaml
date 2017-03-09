@@ -3,5 +3,6 @@ office:
   icon: mdi:desktop-mac
   entities:
     - scene.office
+    - light.office
     - light.office_lamp
     - light.desk_light

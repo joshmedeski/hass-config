@@ -1,8 +1,9 @@
 livingroom:
-  name: Living Room
+  name: Livingroom
   icon: mdi:live-tv
   entities:
     - scene.livingroom
     - switch.playstation4
+    - light.livingroom
     - light.livingroom_lamp
     - light.tv_light
