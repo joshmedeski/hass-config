@@ -1,3 +1,1 @@
 - platform: roku
-  name: Television
-  host: !secret television_host
