@@ -3,4 +3,3 @@ time:
   entities:
     - sun.sun
     - sensor.moon
-    - sensor.yr_symbol
