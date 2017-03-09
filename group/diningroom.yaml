@@ -1,0 +1,6 @@
+diningroom:
+  name: Diningroom
+  icon: mdi:restaurant
+  entities:
+    - switch.rainmate
+    - light.dining_room_light

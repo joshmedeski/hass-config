@@ -1,0 +1,14 @@
+hallway:
+  name: Hallway
+  entities:
+    - climate.hallway
+    - binary_sensor.hallway_thermostat_fan
+    - binary_sensor.hallway_thermostat_has_leaf
+    - binary_sensor.hallway_thermostat_is_locked
+    - binary_sensor.hallway_thermostat_is_using_emergency_heat
+    - binary_sensor.hallway_thermostat_online
+    - sensor.hallway_thermostat_humidity
+    - sensor.hallway_thermostat_hvac_state
+    - sensor.hallway_thermostat_operation_mode
+    - sensor.hallway_thermostat_target
+    - sensor.hallway_thermostat_temperature
