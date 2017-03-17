@@ -1,4 +1,2 @@
 - platform: apple_tv
   name: Apple TV
-  host: !secret apple_tv_host
-  login_id: !secret apple_tv_login_id
