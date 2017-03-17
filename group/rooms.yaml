@@ -4,4 +4,5 @@ rooms:
     - group.livingroom
     - group.office
     - group.kitchen
+    - group.diningroom
     - group.bedroom

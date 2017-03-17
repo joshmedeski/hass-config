@@ -2,6 +2,7 @@ kitchen:
   name: Kitchen
   icon: mdi:restaurant
   entities:
+    - scene.kitchen
     - light.kitchen
     - light.kitchen_light_1
     - light.kitchen_light_2
