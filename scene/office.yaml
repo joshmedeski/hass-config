@@ -4,6 +4,8 @@
       state: on
     light.office_lamp:
       state: on
+    light.drafting_table_lamp:
+      state: on
     light.tv_light:
       state: off
     light.livingroom_lamp:

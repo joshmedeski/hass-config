@@ -18,4 +18,5 @@
       state: off
     light.porch_light:
       state: off
-
+    light.drafting_table_lamp:
+      state: off
