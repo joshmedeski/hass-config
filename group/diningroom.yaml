@@ -5,4 +5,3 @@ diningroom:
     - scene.diningroom
     - light.dining_room_light
     - switch.rainmate
-    - media_player.google_home
