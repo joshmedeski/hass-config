@@ -1,4 +1,4 @@
-- name: Kitchen
+- name: Diningroom
   entities:
     light.dining_room_light:
       state: on
