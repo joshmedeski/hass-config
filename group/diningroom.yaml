@@ -2,5 +2,7 @@ diningroom:
   name: Diningroom
   icon: mdi:restaurant
   entities:
-    - switch.rainmate
+    - scene.diningroom
     - light.dining_room_light
+    - switch.rainmate
+    - media_player.google_home
