@@ -7,3 +7,6 @@ livingroom:
     - light.living_room
     - light.livingroom_lamp
     - light.tv_light
+    - media_player.hisense_roku_tv
+    - media_player.chromecast
+    - media_player.apple_tv
