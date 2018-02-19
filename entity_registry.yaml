@@ -1,0 +1,51 @@
+media_player.joshs_apple_tv:
+  platform: apple_tv
+  unique_id: 4ae449a0f5f1053ec2cca32a16d100642183faeb7f789e6747b0af064fd458b0
+remote.joshs_apple_tv:
+  platform: apple_tv
+  unique_id: 4ae449a0f5f1053ec2cca32a16d100642183faeb7f789e6747b0af064fd458b0
+switch.rock_salt_lamp:
+  platform: wemo
+  unique_id: 221704K01016BE
+switch.christmas_lights:
+  platform: wemo
+  unique_id: 221640K0100A70
+light.front_light:
+  platform: hue
+  unique_id: 00:17:88:01:02:3e:b9:22-0b
+light.kitchen_light_1:
+  platform: hue
+  unique_id: 00:17:88:01:02:3b:11:7d-0b
+light.kitchen_light_2:
+  platform: hue
+  unique_id: 00:17:88:01:02:3b:16:25-0b
+light.back_light:
+  platform: hue
+  unique_id: 00:17:88:01:02:68:42:e6-0b
+light.nightstand_lamp:
+  platform: hue
+  unique_id: 00:17:88:01:02:34:d4:41-0b
+light.desk:
+  platform: hue
+  unique_id: 00:17:88:01:01:21:bf:d3-0b
+light.tv:
+  platform: hue
+  unique_id: 00:17:88:01:01:20:fc:2a-0b
+light.porch_light:
+  platform: hue
+  unique_id: 00:17:88:01:02:3b:08:e0-0b
+light.bathroom_light:
+  platform: hue
+  unique_id: 00:17:88:01:02:6a:23:8d-0b
+light.livingroom_lamp:
+  platform: hue
+  unique_id: 00:17:88:01:02:5c:ca:8e-0b
+light.ceiling:
+  platform: hue
+  unique_id: 00:17:88:01:02:34:32:17-0b
+light.go:
+  platform: hue
+  unique_id: 00:17:88:01:01:17:5d:62-0b
+climate.hallway:
+  platform: nest
+  unique_id: 6Mkma3RWZfbbvcKQfpsBTMHpG3t7z4Sg
