@@ -3,7 +3,8 @@ livingroom:
   icon: mdi:live-tv
   entities:
     - scene.livingroom
-    - switch.playstation4
-    - light.living_room
     - light.livingroom_lamp
-    - light.tv_light
+    - switch.christmas_lights
+    - light.tv
+    - remote.joshs_apple_tv
+    - switch.playstation4

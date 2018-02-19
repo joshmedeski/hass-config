@@ -1,7 +1,0 @@
-diningroom:
-  name: Diningroom
-  icon: mdi:restaurant
-  entities:
-    - scene.diningroom
-    - light.dining_room_light
-    - switch.rainmate

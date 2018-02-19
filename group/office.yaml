@@ -3,7 +3,7 @@ office:
   icon: mdi:desktop-mac
   entities:
     - scene.office
-    - light.office
-    - light.office_lamp
+    - light.ceiling
     - light.desk_light
-    - light.drafting_table_lamp
+    - light.go
+    - switch.rock_salt_lamp

@@ -1,0 +1,6 @@
+studio:
+  name: Studio
+  icon: mdi:youtube-play
+  entities:
+    - light.front_light
+    - light.back_light

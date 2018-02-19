@@ -3,4 +3,5 @@ bedroom:
   icon: mdi:hotel
   entities:
     - scene.bedroom
-    - light.bedroom_lamp
+    - light.nightstand_lamp
+    - light.bathroom_light
